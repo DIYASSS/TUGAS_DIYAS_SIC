@@ -1,0 +1,301 @@
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ mkdir diyasss
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ dir
+diyasss  second.txt  tugas-github-1.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ touch README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ dir
+diyasss  README.md  second.txt  tugas-github-1.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ rm README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ dir
+diyasss  second.txt  tugas-github-1.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ cd diyasss
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ pwd
+/c/Users/TKJ/git-basic/diyasss
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ touch README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ dir
+README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git commit -m "halo perkenalkan aku halaman utama"
+[master 01318fb] halo perkenalkan aku halaman utama
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 diyasss/README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git log
+commit 01318fb5b03510bd766b34d6909249920f33f494 (HEAD -> master)
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:44:22 2022 +0700
+
+    halo perkenalkan aku halaman utama
+
+commit b8ed792e394c22e715d8b4ae459a8dca026f5837
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:37:02 2022 +0700
+
+    ini adalah tugas 1
+
+commit 50c8ae89732e6afa8212e448d7286ddd6dbbd6a7
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:30:30 2022 +0700
+
+    removing first.txt
+
+commit 2d2a3ca8f4c0b6991d77990da89f911b8e15b64b
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:27:23 2022 +0700
+
+    adding second.txt
+
+commit 28daefff866d421840052e62b42d0f42e435a940
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:23:55 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ type README.md
+bash: type: README.md: not found
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ dir
+README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ cat README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ echo halo perkenalkan aku halaman utama >README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git add .
+warning: LF will be replaced by CRLF in diyasss/README.md.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git commit -m "first commit"
+[master 6ea965a] first commit
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ cat README.md
+Hello World
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git checkout README.md
+Updated 1 path from the index
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ cat README.md
+halo perkenalkan aku halaman utama
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git branch cv
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git branch
+  cv
+* master
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git checkout cv
+Switched to branch 'cv'
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git branch
+* cv
+  master
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ touch cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ echo ini adalah file cv>cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ cat
+
+
+
+
+
+
+
+
+
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ cat cv.txt
+ini adalah file cv
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git status
+On branch cv
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cv.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyasss/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git commit -m "initial CV"
+[cv 717e7d4] initial CV
+ 1 file changed, 1 insertion(+)
+ create mode 100644 diyasss/cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyasss/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git commit -m "GSP"
+[cv 04f0443] GSP
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyasss/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git commit -m "GREAT GLORY"
+[cv f5c5c6d] GREAT GLORY
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyasss/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git commit -m "IMAN CORP"
+[cv c82589e] IMAN CORP
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (cv)
+$ git checkout master
+Switched to branch 'master'
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git branch
+  cv
+* master
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git commit -m "update master pertama"
+[master 8b84bb5] update master pertama
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git log
+commit 8b84bb5aae6bafd3b6e014d82f019d2f813c0286 (HEAD -> master)
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 11:13:50 2022 +0700
+
+    update master pertama
+
+commit 6ea965ab24ffc8a57c68336c887ce8c51ce6add6
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:50:36 2022 +0700
+
+    first commit
+
+commit 01318fb5b03510bd766b34d6909249920f33f494
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:44:22 2022 +0700
+
+    halo perkenalkan aku halaman utama
+
+commit b8ed792e394c22e715d8b4ae459a8dca026f5837
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:37:02 2022 +0700
+
+    ini adalah tugas 1
+
+commit 50c8ae89732e6afa8212e448d7286ddd6dbbd6a7
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Fri Jul 1 10:30:30 2022 +0700
+
+    removing first.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git checkout master
+Already on 'master'
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ git merge cv
+Merge made by the 'ort' strategy.
+ diyasss/cv.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 diyasss/cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ dir
+cv.txt  README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyasss (master)
+$ c
